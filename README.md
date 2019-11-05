@@ -24,7 +24,8 @@
   - デフォルトの値として以下のようになっています。
     - iterations: 10000
     - save point: 1000
-    - save image: idol_gans
+    - write directory: ./images
+    - read directory: ./idols
   - プログラム引数
     - -p: 読み込むフォルダの指定（オリジナル画像用）
     - -w: 出力フォルダ
