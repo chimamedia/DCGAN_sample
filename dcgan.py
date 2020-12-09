@@ -5,8 +5,11 @@ from keras.layers.convolutional import UpSampling2D, Conv2D
 from keras.models import Sequential, Model
 from keras.optimizers import Adam
 from keras.utils import np_utils
+from tensorflow import keras
 import tensorflow as tf
-from keras.backend import tensorflow_backend
+#from tensorflow import keras
+#from keras.backend import tensorflow_backend
+
 
 import matplotlib.pyplot as plt
 import os
@@ -17,11 +20,11 @@ from pathlib import Path
 
 np.random.seed(0)
 np.random.RandomState(0)
-tf.set_random_seed(0)
+tf.compat.v1.random.set_random_seed
 
-config = tf.ConfigProto(gpu_options=tf.GPUOptions(allow_growth=True))
-session = tf.Session(config=config)
-tensorflow_backend.set_session(session)
+config = tf.compat.v1.ConfigProto(gpu_options=tf.compat.v1.GPUOptions(allow_growth=True))
+session = tf.compat.v1.Session(config=config)
+tf.compat.v1.keras.backend.set_session(session)
 
 # root_dir = str(Path('idols').resolve())
 
